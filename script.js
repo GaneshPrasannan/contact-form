@@ -12,7 +12,7 @@ $(function() {
     var mail = $("#mail").val();
     var message = $("#message").val();
     $.post(webhookURL,
-{"content": "> ==============================\n> Name: " + name + "\n> Email: " + mail + "\n> Message: " + message + "\n> ==============================\n_ _", "username": webhookUsername, "avatar_url": webhookAvatar})
+{"content": "> =============================\n> Name: " + name + "\n> Email: " + mail + "\n> Message: " + message + "\n> =============================\n_ _", "username": webhookUsername, "avatar_url": webhookAvatar})
     });
 });
 
