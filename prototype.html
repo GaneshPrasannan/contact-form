@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fully Functional Contact Form Template by Ganesh Prasannan</title>
+    <link rel="shortcut icon" href="https://i.pinimg.com/originals/88/42/da/8842dabf70fd5dea2bc6c9673d74bc51.png" type="image/x-icon">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- <div id="form">
+      <form action="">
+        <input type="text" placeholder="Name" id="name">
+        <input type="text" placeholder="Email" id="mail">
+        <input type="text" placeholder="Message" id="message">
+        <input type="submit" name="Submit" id="submit">
+      </form>
+    </div> -->
+    <div class="background">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-header">
+            <div class="screen-header-left">
+              <div class="screen-header-button close"></div>
+              <div class="screen-header-button maximize"></div>
+              <div class="screen-header-button minimize"></div>
+            </div>
+            <div class="screen-header-right">
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+            </div>
+          </div>
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <span>CONTACT US</span>
+              </div>
+              <img src="contactUs.png" alt="Contact Us" class="contactImg">
+              <div class="app-contact">CONTACT INFO : {mobile no.}</div>
+            </div>
+            <div class="screen-body-item">
+              <div class="app-form">
+                <div class="app-form-group">
+                  <input type="text" class="app-form-control" placeholder="NAME" id="name" class="input">
+                </div>
+                <div class="app-form-group">
+                  <input type="text" class="app-form-control" placeholder="EMAIL" id="mail" class="input">
+                </div>
+                <div class="app-form-group message">
+                  <textarea class="app-form-control" placeholder="MESSAGE" id="message" class="input" rows="4" cols="10"></textarea>
+                </div>
+                <div id="status">
+                  Thank you! The form was submitted successfully.
+                </div>
+                <div class="app-form-group buttons">
+                  <input type="submit" name="Submit" id="submit" class="app-form-button" onclick="submitted()">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </body>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script> 
+  <script>
+    var webhookURL = "https://discord.com/api/webhooks/915581842541920276/tNMBPH91hQVdRljDqpHnT7ninLyagcVJO9Yqtpe9DFCkU7nvbB1HF1B37cVlnuBifirv"
+    var webhookUsername = "Contact Form Bot"
+    var webhookAvatar = "https://i.pinimg.com/originals/88/42/da/8842dabf70fd5dea2bc6c9673d74bc51.png"
+
+
+
+    $(function() {
+        $('#submit').click(function(e) {
+        var name = $("#name").val();
+        var mail = $("#mail").val();
+        var message = $("#message").val();
+        $.post(webhookURL,
+    {"content": "> =============================\n> Name: " + name + "\n> Email: " + mail + "\n> Message: " + message + "\n> =============================\n_ _", "username": webhookUsername, "avatar_url": webhookAvatar})
+        });
+    });
+
+    function submitted(){
+        document.getElementById('status').style.display = "block"
+    }
+  </script>
+</html>
