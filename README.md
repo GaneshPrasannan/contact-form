@@ -13,11 +13,12 @@
 
 
 <h1>✨Features</h1>
-- Unique Frontend Design
-- Customizable
-- No Backend Required
-- Uses Discord Webhooks services for the Contact Form
-- Free & Open Source
+<ul>
+  <li>Unique Frontend Design</li>
+  <li>Customizable</li>
+  <li>Uses Discord Webhooks services for the Contact Form</li>
+  <li>Free & Open Source</li>
+</ul>
 
 <br><br>
 
@@ -26,7 +27,7 @@
 
 
 <h1>💡 Customization</h1>
-<h4>To customize the Discord Webhook, such as changing the `Webhook URL`, `Username`, or `Avatar`, go to `script.js`.</h4>
+<h4>To customize the Discord Webhook, such as changing the <code>Webhook URL</code>, <code>Username</code>, or <code>Avatar</code>, go to <code>script.js</code>.</h4>
 <img src="images/customization/variables.png"><br>
 
 To set up the form, you have to set `webhookURL` value to the Discord Webhook URL in which you want the message to be recieved. This is <a href="https://help.dashe.io/en/articles/2521940-how-to-create-a-discord-webhook-url">How to get the link of a Discord Webhook</a>.
